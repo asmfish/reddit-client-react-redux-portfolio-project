@@ -1,0 +1,21 @@
+.comment-item-container {
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.commentor-profile-image {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #7c7878;
+    border-radius: 50%;
+}
+
+.comment-item-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.comment-author {
+    font-weight: bold;
+}

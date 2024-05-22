@@ -7,7 +7,55 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
 }
+
+#root {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+}
+
+header {
+  grid-area: header;
+}
+aside {
+  grid-area: sidebar;
+  padding-left: 1rem;
+}
+
+main {
+  padding-left: 1rem;
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media only screen and (max-width: 600px) {
+  #root {
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header"
+    "sidebar sidebar sidebar"
+    "main main main"
+    "footer footer footer";
+  }
+
+  main, aside {
+    width: 100%;
+  }
+
+  aside {
+    padding: 1rem;
+  }
+}
+

@@ -1,0 +1,55 @@
+.subreddit-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.subreddits-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.subreddit-item-container button {
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    border: none;
+    transition: 300ms;
+    padding: .7rem;
+    margin: .1rem 0;
+}
+
+.subreddit-item-container button:hover{
+    background-color: #b3b7ba98;
+}
+
+.subreddit-title {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+.subreddit-item-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.subreddit-item-container button > * {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+button.active-subreddit {
+    background-color: #eacfc7;
+    color: #2961e5;
+    font-weight: bold;
+}
+
+.skeleton-subreddits {
+    height: 2.5em;
+}
+
+
