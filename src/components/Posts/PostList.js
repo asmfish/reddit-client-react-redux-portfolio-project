@@ -2,8 +2,8 @@ import React from 'react';
 import Post from './Post';
 
 export default function PostList({ posts }) {
-  
-  if (posts) {
+
+  if (posts.length !== 0) {
     return (
       <>
          {
@@ -14,5 +14,8 @@ export default function PostList({ posts }) {
       </>
     );
   }
-  return null;
+
+  return (
+    <h4 className='no-posts-found'>No posts found!</h4>
+  );
 }

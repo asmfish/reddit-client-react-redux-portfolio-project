@@ -112,3 +112,8 @@ hr {
     margin: .3em;
     height: 3em;
 }
+
+.no-posts-found {
+    padding: .2em;
+    background-color: #f6dfdf;
+}

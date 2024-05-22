@@ -17,8 +17,23 @@ header .logo-container {
     gap: 0.5rem;
 }
 
+form.search {
+    display: flex;
+}
+
 header input {
     width: 50%;
+    border-radius: .3em;
+    background-color: #eef2f4;
+    padding: .2em;
+    border: none;
+}
+
+header button{
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background-color: #fff;
 }
 
 .logo-icon {
@@ -29,6 +44,7 @@ header input {
 
 header .search-icon{
      width: 4rem;
+     height: 2em;
 }
 
 header input, header button {
