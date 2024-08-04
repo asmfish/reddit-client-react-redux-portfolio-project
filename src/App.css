@@ -1,38 +1,90 @@
-.App {
+*{
+  box-sizing: border-box;
+}
+
+main {
+  margin-top: 4rem; /* Adjust this based on the height of your header */
+  padding-right: 1em;
+}
+
+.menu-btn {
+  display: none; /* Hide by default */
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.sidebar {
+  position: fixed;
+  width: 300px; 
+  margin-top: 4rem; 
+  height: calc(100vh - 4rem); 
+  overflow-y: auto; 
+  z-index: 998; 
+  background-color: #ffffff; 
+  padding: 0;
+}
+
+.sidebar.visible {
+  transform: translateX(0); /* Show when visible */
+}
+
+footer {
+  margin-top: 2em;
+  background: #f1f1f1; 
+  color: #333; 
   text-align: center;
+  padding: 1em 0 1em 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .sidebar {
+      transform: translateX(-100%); /* Start hidden */
+      z-index: 1000;
+      position: fixed;
+      border-right: 2px solid #e0e0e0;
+  }
+
+  /* Show the sidebar */
+  .sidebar.hidden {
+      transform: translateX(0); 
+  }
+
+  main{
+    width: 96vw;
+    padding: 0;
+  }
+
+  .posts-container {
+    padding: .4em;
+  }
+
+  .menu-btn {
+      display: block; /* Show on mobile */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Media queries */
+@media (min-width: 768px) {
+  .sidebar {
+    width: 300px; 
+    margin-top: 4rem; 
+    height: calc(100vh - 4rem); 
+    overflow-y: auto; 
+    z-index: 998; 
+    background-color: #ffffff; 
   }
-  to {
-    transform: rotate(360deg);
+
+  main {
+    margin-left: 300px;
+    width: calc(100vw - 320px); 
+  }
+
+  .menu-btn {
+    display: none; 
   }
 }
+

@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { HiOutlineSearch } from 'react-icons/hi';
 import './Header.css';
 import { FaReddit } from 'react-icons/fa';
-import { useDispatch, useSelector } from 'react-redux';
 import { setSearchTerm } from '../../features/Posts/postsSlice';
+import { useDispatch } from 'react-redux';
+import { toggleMenu } from '../../menuSlice';
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -20,9 +21,12 @@ const Header = () => {
 
     return (
     <>
+         <button className="menu-btn" onClick={() => dispatch(toggleMenu())}>
+          ☰
+        </button>
         <div className="logo-container">
             <FaReddit className="logo-icon" /> 
-            <span className="logo-text">Reddit<strong>ClientMinimal</strong></span>
+            <span className="logo-text">Reddit<strong>Minimal</strong></span>
         </div>
         <form className="search" onSubmit={handleSearch}>
         <input

@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding-left: .5em;
 }
 
 .subreddit-item-container button {
@@ -51,5 +52,22 @@ button.active-subreddit {
 .skeleton-subreddits {
     height: 2.5em;
 }
+
+/*No need*/
+.subreddits-container2 {
+    position: fixed;
+    width: 360px; /* Adjust width based on your design */
+    margin-top: 4rem; 
+    height: calc(100vh - 4rem); /* Full viewport height minus header height */
+    overflow-y: auto; /* Allow scrolling if sidebar content overflows */
+    z-index: 998; /* Ensure sidebar is below header but above content */
+    background-color: #ffffff; /* Add a solid background color */
+}
+
+.subreddit-list {
+    padding-bottom: 1em;
+}
+
+
 
 

@@ -55,6 +55,7 @@ export const getSubredditPostsAPI = createAsyncThunk(
 export const getPostCommentsAPI = createAsyncThunk(
     'posts/loadComments',
     async (permalink) => {
+        console.log('OO:', permalink);
         const response = await fetch(`${API_ROOT}${permalink}.json`);
         //console.log('LoadComments API')
         const json = await response.json();
